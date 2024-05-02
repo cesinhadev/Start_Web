@@ -11,7 +11,7 @@ function addTask(e){
     const inputTask = e.target.task;
     const textTask = inputTask.value.trim();
 
-    if(textTask === ''){
+    if(textTask === ' '){
         alert('A tarefa precisa de um nome');
         return;
     }
@@ -25,8 +25,12 @@ function addTask(e){
     
     `;
 
-    document.querySelector('.todo-list').insertAdjacentHTML('beforeend', htmlTask.trim());
+    document
+    .querySelector('.todo-list')
+    .insertAdjacentHTML('beforeend', htmlTask.trim());
 
     inputTask.value = ' ';
     
 }
+
+document.querySelector('.add-todo').addEventListener('submit', addTask);
