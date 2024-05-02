@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
-    --gray: #F6F6F6;
-    --gray-black:#1F1C2C;
-    --orange:#F4B200;
+    --gray: #d1d1d1;
     --white:#FFF;
-    --wine:#b91d73;
     --Roboto: 'Roboto',sans-serif;
 }
 
@@ -12,75 +9,87 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: var(--gray);
     font-family: var(--Roboto);
-
+    outline: none;
 }
 
+body{
+    background:url('./img/background.png');
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 84,6rem;
+    margin: 15px;
+    
+}
 
 .container{
-    background-color: var(--gray);
+    background: var(--gray);
     width: 500px;
-    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 100px auto 0;
 }
 
-.container h1{
+.input-task {
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.button-add-task {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.button-add-task:hover {
+    opacity: 0.8;
+}
+
+.list-tasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.done {
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.task {
+    background-color: var(--white);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 15px;   
-}
-
-
-
-.add-todo{
-    display: flex;
-    gap: .5rem;
-}
-
-.add-todo input{
-    flex: 2;
-    height: 2rem;
-    width: 25rem;
+    justify-content: space-between;
+    padding: 0 15px;
     border-radius: 5px;
-    margin-bottom:3rem;
-}
-
-
-.add-todo button{
-    border: none;
-    height: 2rem;
-    width: 2rem;
-    background: var(--wine); 
-    border-radius: 5px;
-    cursor: pointer;
-    
-    
-}
-
-
-.todo-list{
-    list-style: none;
-    word-wrap: break-word;
-    padding: 0;
-    
-    
-}
-
-.todo-list input{
+    margin: 20px;
     cursor: pointer;
 }
 
-.todo-list li{
-    padding: .5rem 1rem;
-    
+.task:hover img {
+    opacity: 1;
 }
-.todo-list li:nth-child(odd){
-    background: var(--white);
-    
-}
-
-
-
-
-
