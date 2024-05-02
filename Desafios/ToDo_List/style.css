@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --gray: #F6F6F6;
+    --gray-black:#1F1C2C;
+    --orange:#F4B200;
+    --white:#FFF;
+    --wine:#b91d73;
+    --Roboto: 'Roboto',sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--gray);
+    font-family: var(--Roboto);
+
+}
+
+
+.container{
+    background-color: var(--gray);
+    width: 500px;
+    margin: 0 auto;
+}
+
+.container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;   
+}
+
+
+
+.add-todo{
+    display: flex;
+    gap: .5rem;
+}
+
+.add-todo input{
+    flex: 2;
+    height: 2rem;
+    width: 25rem;
+    border-radius: 5px;
+    margin-bottom:3rem;
+}
+
+
+.add-todo button{
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    background: var(--wine); 
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+}
+
+
+.todo-list{
+    list-style: none;
+    word-wrap: break-word;
+    padding: 0;
+    
+    
+}
+
+.todo-list input{
+    cursor: pointer;
+}
+
+.todo-list li{
+    padding: .5rem 1rem;
+    
+}
+.todo-list li:nth-child(odd){
+    background: var(--white);
+    
+}
+
+
+
+
+
